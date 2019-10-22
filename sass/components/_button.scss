@@ -1,5 +1,6 @@
 .btn {
-  &:link,
+  &, //just for <button> element
+  &:link, // aplied on a element and visited too
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
@@ -9,6 +10,10 @@
     transition: all 0.2s;
     position: relative;
     font-size: $default-font-size;
+
+    // Change for th <button> element
+    border: none;
+    cursor: pointer;
   }
 
   &:hover {
@@ -19,7 +24,8 @@
       opacity: 0;
     }
   }
-  &:active {
+  &:active, //we add focus because when we clicked we see the border so we applied the active style on the focus also
+  &:focus {
     /* when we click it */
     transform: translateY(1px);
     box-shadow: 0 0.5rem 1rem rgba($color-black, 0.2);
