@@ -1,0 +1,17 @@
+/* By default no margin and no padding on any elements */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  // This defines what 1rem is
+  font-size: 56%;
+  //font-size: 62.5%; /* which is 10px because browser default font size is 16px*/
+}
+body {
+  box-sizing: border-box; /* change the box model : borders dans padding no longer added to total height or width */
+}
